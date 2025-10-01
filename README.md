@@ -1,66 +1,36 @@
-## Foundry
+# 🏛️ Foundry DAO – Governance with ERC20 Voting
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A **Decentralized Autonomous Organization (DAO)** built with **Foundry** that uses an **ERC20 governance token** to allocate voting power and determine membership.  
 
-Foundry consists of:
+This project follows the learnings from **Cyfrin Updraft | Section 8: DAOs & Governance** and demonstrates how to design, deploy, and test decentralized governance systems.  
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+---
 
-## Documentation
+## 📖 Overview
 
-https://book.getfoundry.sh/
+> "Plutocracy is bad! Don't default to ERC20 token voting!!"
 
-## Usage
+While many DAOs default to ERC20 token voting, this repo explores how DAOs can be structured, governed, and tested responsibly.  
 
-### Build
+Key features:
+- ❌ Why plutocracy is dangerous for DAOs  
+- 🏢 DAOs are **not** corporations  
+- ⚙️ How to build your own DAO from scratch  
+- 🪙 Governance tokens (ERC20 with voting power)  
+- 📜 Governor contracts (OpenZeppelin Governor + Timelock)  
+- ✍️ Voting (on-chain & off-chain) with **CastVoteBySig**  
+- ✅ Full Foundry test suite  
 
-```shell
-$ forge build
-```
+---
 
-### Test
+## 🔧 Tech Stack
 
-```shell
-$ forge test
-```
+- [Foundry](https://getfoundry.sh/) – Smart contract development framework  
+- [Solidity](https://soliditylang.org/) – Smart contract language  
+- [OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts) – Governance & ERC20 implementations  
+- [Aragon](https://aragon.org/) – DAO tooling & extensions  
+- [Python](https://www.python.org/) – Optional scripts & helpers  
 
-### Format
 
-```shell
-$ forge fmt
-```
 
-### Gas Snapshots
 
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
